@@ -70,7 +70,7 @@ function Services() {
                 <motion.img
                   src={service.img}
                   alt={service.title}
-                  className="h-full w-full object-cover"
+                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.4 }}
                 />
