@@ -1,52 +1,61 @@
-import aboutImage from "../assets/images/about.jpg";
+import React from "react";
+import { motion } from "framer-motion";
+import illustration from "../assets/images/about.jpg"; // 👈 apna sahi path
 
 function About() {
-  const companyDetails = [
-    { label: "Website", value: "https://devstrings.com" },
-    { label: "Industry", value: "IT Services and IT Consulting" },
-    { label: "Company Size", value: "11-50 employees" },
-    { label: "Headquarters", value: "Faisalabad, Punjab" },
-    { label: "Type", value: "Partnership" },
-    { label: "Founded", value: "2020" },
-  ];
-
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">About Us</h2>
-          <p className="text-gray-600 mb-6">
-           DevStrings is a forward-thinking software company turning ideas
-            into modern digital solutions. Our team of developers and designers
-            focuses on creating scalable, user-friendly products that drive
-            business growth while prioritizing innovation and long-term value.
-          </p>
+    <section id="about" className="py-20 bg-white text-[#0F172A]">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
+        <motion.h2
+          className="text-4xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          About Us
+        </motion.h2>
 
-          {/* Company Details */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-  {companyDetails.map((item, index) => (
-    <div key={index} className="flex gap-2">
-      <span className="font-semibold text-gray-800">{item.label}:</span>
-      {item.label === "Industry" ? (
-        <span className="text-gray-600 break-words">
-          IT Services and IT<br />Consulting
-        </span>
-      ) : (
-        <span className="text-gray-600 break-words">{item.value}</span>
-      )}
-    </div>
-  ))}
-</div>
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+           <p className="text-lg text-gray-700 leading-relaxed">
+  At <span className="font-semibold">webster.tech</span>, our mission is to deliver 
+  technology that creates real impact. With a vision to empower businesses 
+  through innovation, we transform ideas into scalable digital solutions 
+  that drive growth. Guided by creativity and technical excellence, our 
+  approach blends strategy, design, and development to craft experiences 
+  that are user-focused. We take pride in building long-term partnerships, 
+  providing value-driven solutions, and helping our clients stay ahead in 
+  an ever-evolving digital landscape.
+</p>
 
-         
-        </div>
+          </motion.div>
 
-        <div>
-          <img
-            src={aboutImage}
-            alt="About"
-            className="rounded-2xl shadow-lg"
-          />
+          {/* Right Side - Illustration with Floating Animation */}
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.img
+              src={illustration}
+              alt="About Illustration"
+              className="w-full max-w-md md:max-w-lg object-contain rounded-xl shadow-lg"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>

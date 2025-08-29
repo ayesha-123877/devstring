@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa"; 
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa"; 
 
 function Footer() {
   return (
@@ -18,8 +18,8 @@ function Footer() {
         {/* Contact Info */}
         <div className="flex flex-col">
           <h3 className="text-lg font-semibold mb-4 text-blue-400">Contact</h3>
-          <p className="mb-2"> info@devstrings.com</p>
-          <p className="mb-2"> +92 300 1234567</p>
+          <p className="mb-2"> Usmanhafeez147@gmail.com</p>
+          <p className="mb-2">  03431854867</p>
           <p className="mb-4"> Faisalabad, Pakistan</p>
         </div>
 
@@ -35,14 +35,7 @@ function Footer() {
             >
               <FaFacebookF size={18} />
             </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500 text-white hover:bg-blue-600 transition transform hover:scale-110"
-            >
-              <FaTwitter size={18} />
-            </a>
+          
             <a
               href="https://linkedin.com"
               target="_blank"
@@ -57,7 +50,7 @@ function Footer() {
 
       {/* Bottom Copyright */}
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} DevStrings. All rights reserved.
+        © {new Date().getFullYear()} Websters.tech. All rights reserved.
       </div>
     </footer>
   );

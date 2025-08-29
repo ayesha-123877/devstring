@@ -13,10 +13,7 @@ function Choose() {
   return (
     <section className="py-20 bg-[#E5EAF5] text-[#0F172A]">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-4">Why Choose Us?</h2>
-        <p className="text-lg mb-12 text-gray-700">
-          Our proven process ensures that your project is completed on time, within budget, and to your exact specifications.
-        </p>
+        <h2 className="text-4xl font-bold mb-12">Why Choose Us?</h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-8">
           {features.map((feature, index) => (
@@ -35,3 +32,4 @@ function Choose() {
 }
 
 export default Choose;
+
