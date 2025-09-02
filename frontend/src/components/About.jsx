@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import illustration from "../assets/images/about.jpg"; // 👈 apna sahi path
+import illustration from "../assets/images/about.jpg"; 
 
 function About() {
   return (

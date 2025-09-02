@@ -22,12 +22,10 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gray-50 py-20 px-4 scroll-mt-32"  
-      /* 👆 scroll-mt-32 (128px) = jab click karoge, section top se space lega */
-    >
+className="bg-gray-50 py-20 px-4 scroll-mt-32"    >
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#2d4775]">
+        <h2 className="text-3xl font-bold text-center mb-6 text-[#2d4775]">
           Contact Us
         </h2>
 
@@ -35,7 +33,7 @@ function Contact() {
           {/* Left Column: Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white p-6 rounded-2xl shadow-md flex flex-col gap-4 h-full"
+            className="bg-white p-4 rounded-2xl shadow-md flex flex-col gap-3 h-full"
           >
             <input
               type="text"
@@ -69,7 +67,7 @@ function Contact() {
             <textarea
               name="message"
               placeholder="Your Message"
-              rows="4"
+              rows="3"
               value={formData.message}
               onChange={handleChange}
               className="border border-gray-300 p-3 text-sm rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -85,21 +83,21 @@ function Contact() {
           </form>
 
           {/* Right Column: Contact Info + Map */}
-          <div className="flex flex-col gap-4 h-full">
+          <div className="flex flex-col gap-3 h-full">
             {/* Contact Info Card */}
-            <div className="bg-white p-6 rounded-2xl shadow-md space-y-2">
+            <div className="bg-white p-4 rounded-2xl shadow-md space-y-2">
               <h3 className="text-lg font-semibold text-[#2d4775] mb-2">
                 Get in Touch
               </h3>
               <p className="text-gray-700 text-sm">
-                Email: Usmanhafeez147@gmail.com
+                Email: contact@websters.tech
               </p>
               <p className="text-gray-700 text-sm">Phone: 03431854867</p>
               <p className="text-gray-700 text-sm">Faisalabad, Pakistan</p>
             </div>
 
             {/* Google Map */}
-            <div className="rounded-2xl overflow-hidden shadow-md h-48 md:h-64">
+            <div className="rounded-2xl overflow-hidden shadow-md h-40 md:h-52">
               <iframe
                 title="My Location"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3403.9!2d73.1227479!3d31.4352985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1693149540321!5m2!1sen!2s"

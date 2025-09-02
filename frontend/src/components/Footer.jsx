@@ -18,7 +18,7 @@ function Footer() {
         {/* Contact Info */}
         <div className="flex flex-col">
           <h3 className="text-lg font-semibold mb-4 text-blue-400">Contact</h3>
-          <p className="mb-2"> Usmanhafeez147@gmail.com</p>
+          <p className="mb-2"> contact@websters.tech</p>
           <p className="mb-2">  03431854867</p>
           <p className="mb-4"> Faisalabad, Pakistan</p>
         </div>

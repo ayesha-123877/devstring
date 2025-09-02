@@ -1,30 +1,31 @@
 import { Link } from "react-scroll";
-import logo from "../assets/images/logo2.png";
+import logo from "../assets/images/logo.png";
 import { useState } from "react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#0F172A] z-50 shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-2 h-16">
+    <nav className="fixed top-0 left-0 w-full bg-white z-50 shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 h-16">
+        
         {/* Logo */}
-        <div className="flex items-center h-14">
+        <div className="flex items-center h-16 pl-0">
           <img
             src={logo}
             alt="Company Logo"
-            className="max-h-full w-auto object-contain rounded scale-150"
+            className="h-28 w-auto object-contain -ml-1"
           />
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex space-x-6 text-white font-medium">
+        <ul className="hidden md:flex space-x-6 text-[#0F172A] font-medium">
           <li>
             <Link
               to="hero"
               smooth={true}
               duration={500}
-              className="cursor-pointer hover:text-[#FACC15]"
+              className="cursor-pointer hover:text-gray-600"
             >
               Home
             </Link>
@@ -34,7 +35,7 @@ function Navbar() {
               to="about"
               smooth={true}
               duration={500}
-              className="cursor-pointer hover:text-[#FACC15]"
+              className="cursor-pointer hover:text-gray-600"
             >
               About
             </Link>
@@ -44,7 +45,7 @@ function Navbar() {
               to="services"
               smooth={true}
               duration={500}
-              className="cursor-pointer hover:text-[#FACC15]"
+              className="cursor-pointer hover:text-gray-600"
             >
               Services
             </Link>
@@ -54,7 +55,7 @@ function Navbar() {
               to="portfolio"
               smooth={true}
               duration={500}
-              className="cursor-pointer hover:text-[#FACC15]"
+              className="cursor-pointer hover:text-gray-600"
             >
               Portfolio
             </Link>
@@ -64,7 +65,7 @@ function Navbar() {
               to="contact"
               smooth={true}
               duration={500}
-              className="cursor-pointer hover:text-[#FACC15]"
+              className="cursor-pointer hover:text-gray-600"
             >
               Contact
             </Link>
@@ -73,7 +74,7 @@ function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-[#FACC15] text-[#0F172A] px-4 py-2 rounded hover:bg-[#1E3A8A] hover:text-white transition font-semibold">
+          <button className="bg-[#0F172A] text-white px-4 py-2 rounded hover:bg-gray-800 transition font-semibold">
             Get in Touch
           </button>
         </div>
@@ -82,7 +83,7 @@ function Navbar() {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none text-2xl"
+            className="text-[#0F172A] focus:outline-none text-2xl"
           >
             {isOpen ? "✖" : "☰"}
           </button>
@@ -91,7 +92,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-[#0F172A] text-white flex flex-col items-center space-y-4 p-4 shadow-md">
+        <ul className="md:hidden bg-white text-[#0F172A] flex flex-col items-center space-y-4 p-4 shadow-md">
           <li>
             <Link to="hero" smooth={true} duration={500}>
               Home
@@ -118,7 +119,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <button className="bg-[#FACC15] text-[#0F172A] px-4 py-2 rounded hover:bg-[#1E3A8A] hover:text-white transition font-semibold">
+            <button className="bg-[#0F172A] text-white px-4 py-2 rounded hover:bg-gray-800 transition font-semibold">
               Get in Touch
             </button>
           </li>
